@@ -116,6 +116,16 @@ function transformImg(varName, thisEle, minX, maxX, minY, maxY) {
   )}px, ${randomY(minY, maxY)}px)`);
 }
 
+const mq = window.matchMedia("(max-width: 800px)");
+
+const isPhone = mq.matches;
+console.log(isPhone);
+if (isPhone) {
+  function transformImg(varName, thisEle, minX, maxX, minY, maxY) {
+    if (!thisEle.children[2].contains(varName)) return;
+  }
+}
+
 function giveOne(items) {
   items.forEach((item) => {
     return item;
