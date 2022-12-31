@@ -1,0 +1,219 @@
+/* =========================== */
+/* HOMe Component */
+/* ========================== */
+
+.home-page {
+  margin-left: 0;
+  transition: all 0.5s ease-in-out;
+  /* display: none; */
+}
+.single-home {
+  margin-left: 0;
+}
+.single-home h1 {
+  font-size: 7.5rem;
+  line-height: 8.6rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  font-family: var(--big);
+  color: var(--text-dark);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.home-text-animi {
+  padding-bottom: 5px;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      #ffb400,
+      #ffb400 1px,
+      transparent 0,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #ffb400,
+      #ffb400 1px,
+      transparent 0,
+      transparent 12.2px
+    );
+  background-position: 0 103%, 2px 103%;
+  background-size: 17px 10px;
+  background-repeat: repeat-x;
+  animation: 0.8s infinite normal zicZac;
+  animation-timing-function: linear;
+}
+
+@keyframes zicZac {
+  0% {
+    background-position-x: 0, 2px;
+  }
+  100% {
+    background-position-x: 17px, 19px;
+  }
+}
+.home-big-img {
+  width: 100%;
+}
+/* Section -1 */
+.home-padding {
+  padding: 10rem 6rem 8rem;
+}
+.home-market h2 {
+  font-size: 11.3rem;
+  margin-bottom: 6rem;
+  line-height: 13rem;
+  width: 100%;
+  max-width: 645px;
+  font-weight: 400;
+  font-family: var(--big);
+  color: var(--text-dark);
+}
+/* Market CSS */
+.home-market .grid {
+  column-gap: 6rem;
+}
+.grid-content img {
+  width: 100%;
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.grid-content p {
+  font-size: 1.6rem;
+  font-family: var(--small);
+  font-weight: 300;
+  color: var(--text-dark);
+}
+
+/* section-event */
+.home-section-event h2 {
+  font-size: 10rem;
+  line-height: 10rem;
+  text-align: center;
+  font-family: var(--big);
+  font-weight: 400;
+  color: var(--text-dark);
+}
+.section-event-heading {
+  margin-bottom: 10rem;
+}
+.section-event-heading p {
+  font-size: 6.6rem;
+  font-weight: 400;
+  color: #adb5bd;
+}
+.home-section-event .grid {
+  align-items: center;
+  justify-items: center;
+  column-gap: 6rem;
+}
+.linner-animi p {
+  font-size: 16px;
+  margin-bottom: 0.8rem;
+  font-weight: 400;
+  font-family: var(--small);
+  color: var(--text-dark);
+  text-align: center;
+}
+.linner-animi {
+  position: relative;
+  padding: 9rem 0 9rem;
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, left 14px, 0 calc(100% - 14px);
+  background-repeat: repeat-x, repeat-x, repeat-x, repeat-x;
+  background-size: 24px 1px, 24px 1px, 24px 1px, 24px 1px;
+  animation: 0.8s infinite normal linner;
+  animation-timing-function: linear;
+}
+
+@keyframes linner {
+  0% {
+    background-position-x: 0, 0;
+  }
+  100% {
+    background-position-x: 24px, -24px;
+  }
+}
+.home-event-btn {
+  position: absolute;
+  border: 1px solid black;
+  bottom: -2.15rem;
+  padding: 1.3em 3.2em;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+  background-color: var(--white);
+  font-family: var(--small);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.home-event-btn:hover {
+  background-color: #000;
+  color: var(--white);
+}
+
+/* section location */
+
+.section-location-grid {
+  align-items: center;
+  justify-items: center;
+  column-gap: 6rem;
+}
+.section-location-grid a {
+  text-decoration: none;
+  font-size: 8rem;
+  line-height: 10rem;
+  text-align: center;
+  font-weight: 400;
+  color: var(--text-dark);
+}
+
+.location-animi {
+  padding: 90px 30px;
+  background-image: linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(90deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0),
+    linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  animation: 0.4s infinite normal roundLinner;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+}
+.location-map {
+  padding: 1px;
+  filter: grayscale(1);
+  width: 100%;
+  height: 100%;
+}
+.map-home {
+  width: 100%;
+  height: 100%;
+}
+@keyframes roundLinner {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+  100% {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
+  }
+}
+.location-animi:hover {
+  animation-play-state: running;
+}
+.newletter {
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* section which common in all */
+.home-change-section {
+  padding-bottom: 2em;
+}

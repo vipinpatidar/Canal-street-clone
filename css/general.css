@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap");
+/* =========================== */
+/* General Component */
+/* ========================== */
+:root {
+  --blue: #5ea3ec;
+  --red: #f64444;
+  --yellow: #ffb400;
+  --white: #fff;
+  --text-dark: #212529;
+
+  /* Font Family */
+  --small: "poppins", sans-serif;
+  --big: "Playfair Display", serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.325;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  position: relative;
+}
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+.container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+main {
+  display: block;
+}
+main > .page {
+  position: relative;
+  width: calc(100% - 180px);
+  transition: background-color 0.4s ease-in-out;
+}
+.single {
+  padding: 250px 60px 120px 60px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+::selection {
+  background: #000;
+  text-shadow: none;
+  color: #fff;
+}
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+/* =========================== */
+/* HEADER Component */
+/* ========================== */
+.header {
+  width: 100%;
+  /* height: 100vh; */
+}
+
+.navbar {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+}
+
+.logo-img {
+  /* width: 50px; */
+  position: fixed;
+  top: 60px;
+  left: 0px;
+  z-index: 9;
+  width: 100%;
+  max-width: 60px;
+  will-change: transform;
+  border-radius: 50%;
+  transform: matrix(1, 0, 0, 1, 55, 0);
+  transition: transform 0.3s;
+}
+
+.nav-item {
+  min-width: 6rem;
+  width: 6rem;
+  padding: 6rem 5px;
+  height: 100%;
+  position: relative;
+  color: black;
+  will-change: width;
+  cursor: pointer;
+  transition: width 400ms ease;
+}
+
+.nav-item p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  font-family: var(--small);
+}
+.rotate-text {
+  font-size: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translateY(-50%) translateX(-50%) rotate(90deg);
+  letter-spacing: 1.3px;
+  font-family: var(--small);
+}
+
+.home {
+  background-color: var(--white);
+}
+.food {
+  background-color: var(--blue);
+}
+
+.retail {
+  background-color: var(--red);
+}
+.community {
+  background-color: var(--yellow);
+}
+
+.nav-item.open {
+  width: 100%;
+}
+
+.nav-item.open .rotate-text {
+  display: none;
+  top: 30%;
+  left: 100px;
+  color: #495057;
+}
+
+.nav-item.open.nav-item p {
+  display: none;
+}
+/* =========================== */
+/* Section Social Media CSS */
+/* =========================== */
+
+.section-social-media {
+  padding-bottom: 0;
+}
+.section-social-media .vendor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 60px;
+  background-image: repeating-linear-gradient(
+      -74deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3) 1px,
+      transparent 0,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      -74deg,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3) 1px,
+      transparent 0,
+      transparent 4px
+    );
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-position: 0 0, 0 100%;
+  background-size: 100% 12px, 100% 12px;
+  animation: none;
+}
+
+.vendor h2 {
+  font-size: 5.2rem;
+  text-align: center;
+  font-weight: 400;
+  color: #212529;
+}
+
+.vendor a {
+  text-align: center;
+  border: 1px solid black;
+  padding: 1em 3em;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #212529;
+  text-decoration: none;
+  background-color: var(--white);
+  font-family: var(--small);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.vendor a:hover {
+  background-color: #000;
+  color: var(--white);
+}
+
+.social-media {
+  column-gap: 3em;
+}
+.social-media p {
+  font-size: 16px;
+  color: #212529;
+  font-weight: 400;
+  font-family: var(--small);
+}
+.icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  fill: #212529;
+  font-weight: 400;
+}
+
+.social-media-icons {
+  padding: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+/*  newletter */
+.newletter {
+  padding: 40px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.newletter p {
+  margin-right: 15rem;
+  width: 35%;
+  font-size: 2.4rem;
+  word-spacing: 3px;
+  font-weight: 400;
+  font-family: var(--small);
+  color: #212529;
+}
+
+.send-email {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.input-text {
+  width: 100%;
+  flex: 1;
+  padding: 1.6em;
+  outline: none;
+}
+
+.input-text::placeholder {
+  color: rgba(0, 0, 0, 1);
+  font-size: 14px;
+}
+.icon-send {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+/* Footer CSS */
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10rem;
+  margin-top: 2rem;
+  padding: 0 60px 60px;
+}
+
+.footer p {
+  font-size: 1.4rem;
+  font-family: var(--small);
+  color: #212529;
+  font-weight: 400;
+}
+
+.footer p:last-child {
+  margin-left: auto;
+}
+
+.footer .line-through {
+  text-decoration: line-through;
+}
+
+/* Mobile navbar */
+
+.close-open-btn {
+  display: none;
+}
+.mobile-navbar {
+  display: none;
+}

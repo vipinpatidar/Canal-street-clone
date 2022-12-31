@@ -1,0 +1,207 @@
+.community-page {
+  margin-left: 180px;
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+.retail-hero-img .community-img-hide {
+  display: none;
+}
+.community-event-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 0em 4em;
+  margin-bottom: 5rem;
+  /* align-items: center;
+  justify-items: center; */
+}
+.communit-hero-span {
+  font-size: 6rem;
+  color: #000;
+  font-weight: 500;
+  position: absolute;
+  top: -2rem;
+  right: -7rem;
+}
+.market-event-grid {
+  grid-column: 2/4;
+  grid-row: 2/5;
+  align-self: center;
+  justify-self: center;
+  font-size: 7rem;
+  line-height: 9rem;
+  text-align: center;
+  font-family: var(--big);
+  font-weight: 400;
+  color: var(--text-dark);
+}
+.communit-event-pera {
+  align-self: center;
+  justify-self: center;
+  padding: 0 3em 0em;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-dark);
+  font-family: var(--small);
+}
+.communit-event-pera p:first-child {
+  margin-bottom: 0.6em;
+  font-size: 14px;
+  font-weight: 400;
+}
+.hack-city {
+  grid-column: 4/-1;
+  /* grid-row: 3/4; */
+}
+.taiwan-city {
+  grid-row: 4/5;
+}
+.event-lines {
+  padding: 0px 0 0px;
+  background-image: repeating-linear-gradient(
+    -74deg,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5) 1px,
+    transparent 0,
+    transparent 8px
+  );
+  display: inline-block;
+  background-position: 0;
+  background-repeat: repeat-x;
+  background-size: 100% 22px;
+}
+
+.communit-big-btn {
+  border: 1.5px solid #000;
+  width: 100%;
+  padding: 1em 3em;
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: var(--small);
+  background-color: transparent;
+  transition: background-color 500ms ease-in-out, color 500ms ease-in-out;
+}
+
+.communit-big-btn:hover {
+  background-color: #000;
+  color: white;
+}
+
+/* Feature */
+
+.feature-section h2 {
+  font-size: 9rem;
+  margin-bottom: 4rem;
+  font-family: var(--big);
+  font-weight: 400;
+  color: var(--text-dark);
+}
+.features {
+  gap: 10em 7rem;
+  margin-bottom: 16rem;
+}
+.feature-imgae {
+  width: 100%;
+  height: 409px;
+}
+
+.feature-imgae h3 {
+  font-size: 4rem;
+  font-family: var(--big);
+  font-weight: 400;
+  color: var(--text-dark);
+  border-left: 10px solid #fff;
+  width: 90%;
+  position: relative;
+  left: 5rem;
+  top: -4.5rem;
+}
+.feature-imgae h3 > span {
+  background-color: white;
+  padding: 0.3em 0em 0.3em;
+  border-right: 14px solid #fff;
+}
+.feature-imgae h3 > span span {
+  position: relative;
+  z-index: 1;
+}
+.img-cut {
+  width: 100%;
+  height: 409px;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feature-imgae img {
+  width: 100%;
+  display: block;
+}
+.img-1,
+.img-2 {
+  align-items: end;
+}
+
+/* change in svg section */
+.svg-rotate-community {
+  transform: rotateY(180deg);
+}
+.chagne-happy-img-community {
+  padding: 15rem 0 0;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 71px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 70px
+    );
+  background-position: 0 0, 0 0;
+  background-size: 100px 50px, 100px 50px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal communityLines;
+  animation-timing-function: linear;
+}
+
+@keyframes communityLines {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100px 0, 100px 0;
+  }
+}
+
+/* linner animi section */
+.community-padding {
+  padding: 6rem 6rem;
+}
+
+.community-event-btn {
+  position: absolute;
+  border: 1px solid black;
+  bottom: -2.15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.3em 3.2em;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  text-decoration: none;
+  background-color: var(--yellow);
+  font-family: var(--small);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.community-event-btn:hover {
+  background-color: #000;
+  color: var(--white);
+}

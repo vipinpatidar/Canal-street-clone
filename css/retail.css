@@ -1,0 +1,88 @@
+.retail-single {
+  transition: all 0.5s ease-in-out;
+  display: none;
+  margin-left: 120px;
+}
+.retail-top-section {
+  gap: 2rem;
+}
+
+.retail-top-section .rotate-food {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.756);
+  rotate: 90deg;
+}
+
+.retail-top-section h1 {
+  font-size: 18rem;
+  font-family: var(--big);
+  line-height: 19rem;
+  color: #212529;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.retail-hero-img {
+  width: 65%;
+  justify-self: end;
+  position: relative;
+  margin-right: 6.4rem;
+  padding-top: 3em;
+}
+
+.retail-hero-img img {
+  width: 100%;
+  display: block;
+}
+
+.one-retail {
+  background-image: url(../img/design-1.avif);
+}
+.two-retail {
+  background-image: url(../img/design-2.avif);
+  background-size: cover;
+}
+.three-retail {
+  background-image: url(../img/design-3.avif);
+}
+.four-retail {
+  background-image: url(../img/design-4.avif);
+}
+.five-retail {
+  background-image: url(../img/design-5.avif);
+}
+.six-retail {
+  background-image: url(../img/design-6.avif);
+}
+.seven-retail {
+  background-image: url(../img/design-7.avif);
+}
+.eight-retail {
+  background-image: url(../img/design-8.avif);
+}
+.nine-retail {
+  background-image: url(../img/design-9.avif);
+}
+.ten-retail {
+  background-image: url(../img/design-10.avif);
+}
+.eleven-retail {
+  background-image: url(../img/design-11.avif);
+}
+.twelve-retail {
+  background-image: url(../img/design-12.avif);
+}
+
+.size-again {
+  width: 350px;
+  height: 450px;
+}
+.savage {
+  width: 410px;
+  height: 300px;
+}
+
+/* Happy hOur */

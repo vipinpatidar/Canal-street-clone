@@ -1,0 +1,268 @@
+/* Top Section */
+.food-single {
+  margin-left: 60px;
+  transition: all 0.5s ease-in-out;
+  display: none;
+}
+.food-padding {
+  padding: 15.7rem 6rem 2rem;
+  position: relative;
+}
+
+.food-top-pera-text {
+  grid-column: 1/-1;
+  text-align: right;
+  font-size: 16px;
+  color: #000;
+  font-weight: 300;
+  font-family: var(--small);
+  margin-bottom: 4rem;
+  padding-right: 2.2rem;
+}
+.food-top-section {
+  gap: 4rem;
+  align-items: start;
+}
+.food-top-section .rotate-food {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.756);
+  rotate: 90deg;
+}
+.rotate-food::after {
+  content: "→";
+  padding: 0.6em;
+}
+.food-top-section h1 {
+  font-size: 20rem;
+  font-family: var(--big);
+  line-height: 19rem;
+  color: #212529;
+  letter-spacing: 0;
+  font-weight: 400;
+}
+
+.food-hero-img {
+  width: 65%;
+  justify-self: end;
+  position: relative;
+  margin-right: 6.4rem;
+  padding-top: 3em;
+}
+
+.food-hero-img img {
+  width: 100%;
+  display: block;
+}
+
+.food-hero-span {
+  font-size: 6rem;
+  color: #000;
+  font-weight: 500;
+  position: absolute;
+  top: -2rem;
+  right: -7rem;
+}
+
+/* Section Food recipe */
+.food-recipes {
+  gap: 8rem 6rem;
+  align-items: start;
+  justify-items: start;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--small);
+  position: relative;
+}
+
+.one {
+  background-image: url(../img/food-1.png);
+}
+.two {
+  background-image: url(../img/food-3.avif);
+  background-size: cover;
+}
+.three {
+  background-image: url(../img/food-2.png);
+  background-size: cover;
+  object-fit: cover;
+}
+.four {
+  background-image: url(../img/food-7.png);
+}
+.five {
+  background-image: url(../img/food-8.png);
+}
+.six {
+  background-image: url(../img/food-4.avif);
+}
+.seven {
+  background-image: url(../img/food-10.png);
+}
+.eight {
+  background-image: url(../img/food-6.avif);
+}
+.nine {
+  background-image: url(../img/food5.avif);
+}
+.hover-reveal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 420px;
+  height: 350px;
+  opacity: 0;
+  pointer-events: none;
+  /* transform: translate(0px, 0px); */
+  /* transform-origin: center center; */
+  transition: all 0.3s ease-in-out;
+}
+.glass {
+  width: 350px;
+  height: 450px;
+}
+.pizza {
+  width: 500px;
+  height: 350px;
+}
+.hover-reveal--inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
+  overflow: hidden;
+}
+.hover-img {
+  background-size: 100% 100%;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  will-change: transform;
+  transform: scale(0.8, 0.8);
+  transition: 0.3s transform;
+}
+
+.item {
+  font-family: var(--small);
+  font-weight: 500;
+  position: relative;
+  font-size: 1.6rem;
+}
+.recipe-name {
+  margin-top: 0.5em;
+  font-size: 3rem;
+  position: relative;
+}
+.recipe-item {
+  font-family: var(--big);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+/* Happy Hours */
+.happy-hours {
+  align-items: center;
+  justify-items: center;
+  padding: 11rem 0;
+  margin-bottom: 120px;
+  background-image: repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 68px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 68px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 71px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      #000,
+      #000 1px,
+      transparent 0,
+      transparent 70px
+    );
+  background-position: 0 101%, 0 101%, 0 0, 0 0;
+  background-size: 93px 50px, 93px 50px, 100px 50px, 100px 50px;
+  background-repeat: repeat-x;
+  animation: 2s infinite normal happyLines;
+  animation-timing-function: linear;
+}
+
+@keyframes happyLines {
+  0% {
+    background-position: 0 101%, 0 101%, 0 0, 0 0;
+  }
+  100% {
+    background-position: 93px 101%, 93px 101%, 100px 0, 100px 0;
+  }
+}
+.happy-hours-text {
+  text-align: center;
+}
+.happy-hours-text h2 {
+  font-size: 10rem;
+  line-height: 9.5rem;
+  font-family: var(--big);
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.happy-hours-text p {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--small);
+  padding: 2em 3em 0;
+}
+.svg-icon svg {
+  width: 17rem;
+  height: 18rem;
+  animation: svgAnimi 1s infinite alternate ease-in-out;
+}
+.svg-rotate {
+  transform: rotate(180deg);
+}
+.svg-delay svg:first-child {
+  animation-delay: 0.5s;
+}
+
+@keyframes svgAnimi {
+  0% {
+    transform: translateY(12%);
+  }
+  100% {
+    transform: translateY(-12%);
+  }
+}
+
+/* sction which common */
+.vendor .food-changed-btn {
+  background-color: transparent;
+}
+
+.send-email .food-change-input {
+  background-color: transparent;
+  border: 1px solid black;
+  outline: none;
+}
+.food-change-section {
+  padding-top: 3rem;
+  color: #000 !important;
+}
