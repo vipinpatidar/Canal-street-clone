@@ -101,6 +101,72 @@ mobileNveToggleBtn.forEach((mobileNav) => {
 });
 // On Hover show image
 
+// Utility functions for random positioning
+function getRandomPosition(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function transformImage(element, targetElement, xRange, yRange) {
+  if (!targetElement.children[2].contains(element)) return;
+  const [minX, maxX] = xRange;
+  const [minY, maxY] = yRange;
+
+  element.style.transform = `translate(${getRandomPosition(
+    minX,
+    maxX
+  )}px, ${getRandomPosition(minY, maxY)}px)`;
+}
+
+const isPhone = window.matchMedia("(max-width: 800px)").matches;
+// console.log(isPhone);
+
+if (isPhone) {
+  function transformImage(element, targetElement, xRange, yRange) {
+    if (!targetElement.children[2].contains(element)) return;
+  }
+}
+
+function applyTransforms(imgDiv, transforms) {
+  transforms.forEach(([elements, xRange, yRange]) => {
+    elements.forEach((element) =>
+      transformImage(element, imgDiv, xRange, yRange)
+    );
+  });
+}
+
+// Hover event listeners
+hoverForImgDiv.forEach((imgDiv, idx) => {
+  imgDiv.addEventListener("mouseenter", () => {
+    imgDiv.children[2].style.zIndex = -100;
+
+    const transforms = [
+      [leftTop, [-120, 650], [-120, 150]],
+      [topUP, [-300, 300], [-120, 150]],
+      [rightTop, [-650, 120], [-100, 150]],
+      [leftMiddle, [-120, 600], [-250, -45]],
+      [middle, [-500, 500], [-400, -80]],
+      [rightMiddle, [-500, 80], [-20, -255]],
+      [leftBottom, [-80, 500], [-400, -185]],
+      [bottomDown, [-400, 400], [-400, -305]],
+      [rightBottom, [-500, 80], [-400, -185]],
+      [[leftBottomLast], [-80, 500], [-400, -225]],
+      [[bottomLast], [-400, 400], [-400, -305]],
+      [[rightBottomLast], [-500, 80], [-400, -185]],
+    ];
+
+    applyTransforms(imgDiv, transforms);
+
+    imgDiv.children[2].style.opacity = 1;
+    hoverImg[idx].style.transform = `scale(1,1)`;
+  });
+
+  imgDiv.addEventListener("mouseleave", () => {
+    imgDiv.children[2].style.opacity = 0;
+    hoverImg[idx].style.transform = `scale(0.8,0.8)`;
+  });
+});
+
+/*
 function randomX(minX, maxX) {
   return Math.floor(Math.random() * (maxX - minX + 1) + minX);
 }
@@ -180,3 +246,4 @@ hoverForImgDiv.forEach((imgDiv, idx) => {
     // imgDiv.children[2].style.transform = `translate(${-e.clientX}px, 300px)`;
   });
 });
+*/
